@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario Doméstico</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">Inventario Doméstico</a>
+        </div>
+    </nav>
+
+    <div class="inventory-container">
+        <h1>Inventario Doméstico</h1>
+        <button id="load-inventory-btn">Cargar Inventario</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Categoría</th>
+                </tr>
+            </thead>
+            <tbody id="inventory-table-body">
+                <!-- Los productos se llenarán aquí dinámicamente con JS -->
+            </tbody>
+        </table>
+        <button id="send-number-btn">Enviar número</button>
+        <button id="activate-mode-btn">Activar Modo Lectura</button>
+        <p id="number-output"></p>
+        <p id="mode-status-output"></p>
+		<p id="peso">Cargando peso...</p>
+    </div>
+
+<script src="{{ url_for('static', filename='js/scripts.js') }}" defer></script>
+</body>
+</html>
